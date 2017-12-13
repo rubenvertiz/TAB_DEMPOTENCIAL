@@ -1,0 +1,156 @@
+<div class="container-fluid h-100 w-100" style="overflow: scroll;">
+    <div class="row no-gutters m-1 border align-items-center" style="height: 50px;background-color:white;">
+        <div class="col app-font-title pl-2 no-spaces" style="background-color:white;">
+            <span>DEMANDA POTENCIAL</span>
+        </div>
+    </div>
+    <div class="container-fluid w-100">
+        <div class="row w-100" style="margin-top: 5px;">
+            <div class="col-4 m-auto w-100">
+                <button type="button" class="btn btn-success" id="generaReporteCSV" ng-click="generaReporteCSV()">Reporte CSV</button>
+                <button type="button" class="btn btn-success" id="generaReporteXLSX" ng-click="generaReporteXLSX()">Reporte Excel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row w-100 p-0 m-0" style="height: 350px;">
+        <div class="col-12 col-sm-12 p-1 h-100">
+            <light-chart-container
+                    str-title="Precalificaciones"
+                    str-footer=""
+            >
+            <chart>
+                <am-chart
+                        id="tabDemandaPotencial-chart01"
+                        json-chart-path="json/chart-tab-demanda-potencial.json"
+                        click-slice-event-name="resumenEstatusCick"
+                        service-cnf="{
+                        idTab:1001,
+                        idGra:1,
+                        idQry:1
+                        }"
+                       >
+                </am-chart>
+            </chart>
+        </light-chart-container>
+    </div>
+    <div class="row w-100 p-0 m-0" style="height: 350px;">
+        <div class="col-12 col-sm-12 p-1 h-100">
+            <light-chart-container
+                    str-title="Precalificaciones por Delegación"
+                    str-footer=""
+            >
+                <chart>
+                    <am-chart
+                            id="tabDemandaPotencial-chart02"
+                            json-chart-path="json/chart-tab-demanda-potencial-precalificacion.json"
+                            zoom="{
+                                    ini:0,
+                                    end:5
+                                }"
+                            lst-ob-conditions="option.filters"
+                            service-cnf="{
+                            idTab:1001,
+                            idGra:2,
+                            idQry:1
+                            }"
+                    >
+                    </am-chart>
+                </chart>
+            </light-chart-container>
+        </div>
+        <div class="col-12 col-sm-12 p-1 h-100" style="height: 350px;">
+            <light-chart-container
+                    str-title="Montos por Delegación"
+                    str-footer=""
+            >
+                <chart>
+                    <am-chart
+                            id="tabDemandaPotencial-chart03"
+                            json-chart-path="json/chart-tab-demanda-potencial-monto.json"
+                            zoom="{
+                                    ini:0,
+                                    end:5
+                                }"
+                            lst-ob-conditions="option.filters"
+                            service-cnf="{
+                            idTab:1001,
+                            idGra:3,
+                            idQry:1
+                            }"
+                    >
+                    </am-chart>
+                </chart>
+            </light-chart-container>
+        </div>
+        <div class="row w-100 p-0 m-0" style="height: 350px;">
+            <div class="col-12 col-sm-12 p-1 h-100">
+                <light-chart-container
+                        str-title="Montos promedio por Delegación"
+                        str-footer=""
+                >
+                <chart>
+                    <am-chart
+                            id="tabDemandaPotencial-chart04"
+                            json-chart-path="json/chart-tab-demanda-potencial-monto-prom.json"
+                            zoom="{
+                                ini:0,
+                                end:5
+                            }"
+                            lst-ob-conditions="option.filters"
+                            service-cnf="{
+                            idTab:1001,
+                            idGra:4,
+                            idQry:1
+                            }"
+                    >
+                    </am-chart>
+                </chart>
+            </light-chart-container>
+        </div>
+        <div class="col-12 col-sm-12 p-1 h-100" style="height: 350px;">
+            <light-chart-container
+                     str-title="Precalificaciones por Género"
+                     str-footer=""
+            >
+                 <chart>
+                     <am-chart
+                             id="tabDemandaPotencial-chart05"
+                             json-chart-path="json/chart-tab-demanda-potencial-genero.json"
+                             lst-ob-conditions="option.filters"
+                             service-cnf="{
+                             idTab:1001,
+                             idGra:5,
+                             idQry:1
+                             }"
+                     >
+                     </am-chart>
+                 </chart>
+             </light-chart-container>
+        </div>
+        <div class="col-12 col-sm-12 p-1 h-100" style="height: 350px;">
+            <light-chart-container
+                    str-title="Precalificaciones por Edad y Género"
+                    str-footer=""
+            >
+                <chart>
+                    <am-chart
+                            id="tabDemandaPotencial-chart06"
+                            json-chart-path="json/chart-tab-demanda-potencial-edad-genero.json"
+                            zoom="{
+                                 ini:0,
+                                 end:5
+                             }"
+                            lst-ob-conditions="option.filters"
+                            service-cnf="{
+                            idTab:1001,
+                            idGra:6,
+                            idQry:1
+                            }"
+                    >
+                    </am-chart>
+                </chart>
+            </light-chart-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<div class="container-fluid h-100 w-100" style="overflow: scroll;">
+    <div class="row no-gutters m-1 border align-items-center" style="height: 50px;background-color:white;">
+        <div class="col app-font-title pl-2 no-spaces" style="background-color:white;">
+            <span>Resumen de uso</span>
+        </div>
+    </div>
+    <div class="row" style="">
+        <div class="col-12 col-sm-4 p-1">
+            <info-bit-cont
+                    title="info.servidores.title"
+                    nu-data="info.servidores.data"
+                    class-icon="info.servidores.classInfo">
+            </info-bit-cont>
+        </div>
+        <div class="col-12 col-sm-4 p-1">
+            <info-bit-cont
+                    title="info.areas.title"
+                    nu-data="info.areas.data"
+                    class-icon="info.areas.classInfo">
+            </info-bit-cont>
+        </div>
+        <div class="col-12 col-sm-4 p-1">
+            <info-bit-cont
+                    title="info.plataformas.title"
+                    nu-data="info.plataformas.data"
+                    class-icon="info.plataformas.classInfo">
+            </info-bit-cont>
+        </div>
+    </div>
+    <div class="row w-100" style="height: 72%;">
+        <div class="col-12 col-sm-6 p-1 h-100">
+            <light-chart-container
+                    str-title="Servidores por Área"
+                    str-footer="Click para ver detalle por área"
+            >
+                <chart>
+
+                    <am-chart-vertical-bar
+                            id="servidoresPorArea01"
+                            json-chart-path="json/resumen/servidoresPorArea.json"
+                            set-on-top="true"
+                            maximize-attr="nuServidores"
+                            max-attr="nuMaxCPU"
+                            max-attr-format="#,##0"
+                            max-graph-id="AmGraph-2"
+                            click-event-name="resumenAreaCick"
+                            on-data-ready="char1DataReady"
+                            mock-data=""
+                            service-cnf="{
+                            idTab:1001,
+                            idGra:2,
+                            idQry:1
+                        }">
+                    </am-chart-vertical-bar>
+                </chart>
+            </light-chart-container>
+        </div>
+        <div class="col-12 col-sm-6 p-1 h-100">
+            <light-chart-container
+                    str-title="Servidores por Plataforma"
+                    str-footer=""
+            >
+                <chart>
+                    <am-chart-vertical-bar
+                            id="servidoresPorPlataforma02"
+                            json-chart-path="json/resumen/servidoresPorPlataforma.json"
+                            set-on-top="true"
+                            maximize-attr="nuServidores"
+                            max-attr="nuMaxCPU"
+                            max-attr-format="#,##0"
+                            max-graph-id="AmGraph-2"
+                            service-cnf="{
+                            idTab:1001,
+                            idGra:3,
+                            idQry:1
+                        }">
+                    </am-chart-vertical-bar>
+                </chart>
+            </light-chart-container>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="row w-100" style="height: 40%;">
+    <div class="col-11 p-3 h-100">
+        <light-chart-container>
+            <chart>
+                <am-chart
+                        style="height: 100%;"
+                        id="area1"
+                        json-chart-path="json/resumen/areaResumenAcumulado.json"
+                        mock-data="areaAcumulado"
+                        service-cnf="{
+                            idTab:2,
+                            idGra:10,
+                            idQry:1
+                        }">
+                </am-chart>
+            </chart>
+        </light-chart-container>
+    </div>
+</div>-->

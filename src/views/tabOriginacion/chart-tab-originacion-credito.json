@@ -1,0 +1,52 @@
+{
+  "language": "es",
+  "pathToImages":"amcharts/images/",
+  "type": "serial",
+  "categoryField": "txEdo",
+  "columnSpacing": 10,
+  "columnWidth": 0.82,
+  "plotAreaBorderColor": "#888888",
+  "sequencedAnimation": false,
+  "startDuration": 1,
+  "startEffect": "bounce",
+  "borderColor": "#888888",
+  "color": "#3A8B3C",
+  "fontFamily": "Helvetica",
+  "fontSize": 10,
+  "categoryAxis": {
+    "gridPosition": "start",
+    "gridThickness": 0
+  },
+  "chartCursor": {
+    "enabled": true
+  },
+  "chartScrollbar": {
+    "enabled": true
+  },
+  "trendLines": [],
+  "graphs": [
+    {
+      "fillAlphas": 1,
+      "id": "AmGraph-1",
+      "title": "graph 1",
+      "labelText": "[[value]]",
+      "type": "column",
+      "valueField": "nuCreditos",
+      "fillColors": "#51b261",
+      "lineThickness": 0
+    }
+  ],
+  "guides": [],
+  "valueAxes": [
+    {
+      "id": "ValueAxis-1",
+      "title": "# Cantidad de Créditos"
+    }
+  ],
+  "allLabels": [],
+  "balloon": {},
+  "dataProvider": []
+}
+
+
+

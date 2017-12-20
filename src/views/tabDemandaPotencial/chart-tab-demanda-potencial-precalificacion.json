@@ -33,7 +33,7 @@
       "title": "graph 1",
       "labelText": "[[value]]",
       "type": "column",
-      "valueField": "nuCreditos",
+      "valueField": "nuPrecalificaciones",
       "fillColors": "#51b261",
       "lineThickness": 0
     }
@@ -42,7 +42,7 @@
   "valueAxes": [
     {
       "id": "ValueAxis-1",
-      "title": "# Cantidad de Créditos"
+      "title": "# Precalificaciones"
     }
   ],
   "allLabels": [],

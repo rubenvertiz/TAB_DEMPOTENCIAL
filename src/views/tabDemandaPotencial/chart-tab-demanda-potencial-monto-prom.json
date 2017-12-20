@@ -3,6 +3,21 @@
   "pathToImages":"amcharts/images/",
   "svgIcons": false,
   "type": "serial",
+  "colors": [
+    "#0D8ECF",
+    "#FCD202",
+    "#B0DE09",
+    "#0D8ECF",
+    "#2A0CD0",
+    "#CD0D74",
+    "#CC0000",
+    "#00CC00",
+    "#0000CC",
+    "#DDDDDD",
+    "#999999",
+    "#333333",
+    "#990000"
+  ],
   "categoryField": "txEdo",
   "columnSpacing": 10,
   "columnWidth": 0.82,
@@ -13,7 +28,7 @@
   "borderColor": "#888888",
   "color": "#000000",
   "fontFamily": "Helvetica",
-  "fontSize": 15,
+  "fontSize": 14,
   "categoryAxis": {
     "gridPosition": "start",
     "gridThickness": 0
@@ -33,16 +48,15 @@
       "title": "graph 1",
       "labelText": "[[value]]",
       "type": "column",
-      "valueField": "nuCreditos",
-      "fillColors": "#51b261",
-      "lineThickness": 0
+      "valueField": "nuMonto",
+      "fillColor":"#0D8ECF"
     }
   ],
   "guides": [],
   "valueAxes": [
     {
       "id": "ValueAxis-1",
-      "title": "# Cantidad de Créditos"
+      "title": "$ Monto del Crédito"
     }
   ],
   "allLabels": [],

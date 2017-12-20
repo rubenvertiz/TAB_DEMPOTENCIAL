@@ -1,0 +1,55 @@
+{
+  "type": "pie",
+  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+  "innerRadius": "40%",
+  "colors": [
+    "#FF0F00",
+    "#0D8ECF",
+    "#B0DE09",
+    "#FCD202",
+    "#F8FF01",
+    "#B0DE09",
+    "#04D215",
+    "#0D8ECF",
+    "#0D52D1",
+    "#2A0CD0",
+    "#8A0CCF",
+    "#CD0D74",
+    "#754DEB",
+    "#DDDDDD",
+    "#999999",
+    "#333333",
+    "#000000",
+    "#57032A",
+    "#CA9726",
+    "#990000",
+    "#4B0C25"
+  ],
+  "titleField": "txGenero",
+  "valueField": "nuPrecalificaciones",
+  "fontSize": 15,
+  "allLabels": [],
+  "balloon": {},
+  "legend": {
+    "enabled": true,
+    "align": "center",
+    "markerType": "circle",
+    "position": "left",
+    "valueAlign": "left"
+  },
+  "titles": [],
+  "dataProvider": [
+    {
+      "txGenero": "category 1",
+      "nuPrecalificaciones": 8
+    },
+    {
+      "txGenero": "category 2",
+      "nuPrecalificaciones": 6
+    },
+    {
+      "txGenero": "category 3",
+      "nuPrecalificaciones": 2
+    }
+  ]
+}

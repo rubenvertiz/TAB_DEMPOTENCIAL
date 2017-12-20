@@ -8,7 +8,6 @@
         <div class="row w-100" style="margin-top: 5px;">
             <div class="col-4 m-auto w-100">
                 <button type="button" class="btn btn-success" id="generaReporteCSV" ng-click="generaReporteCSV()">Reporte CSV</button>
-                <button type="button" class="btn btn-success" id="generaReporteXLSX" ng-click="generaReporteXLSX()">Reporte Excel</button>
             </div>
         </div>
     </div>
@@ -44,11 +43,11 @@
                     <am-chart
                             id="tabDemandaPotencial-chart02"
                             json-chart-path="json/chart-tab-demanda-potencial-precalificacion.json"
-                            zoom="{
-                                    ini:0,
-                                    end:5
-                                }"
                             lst-ob-conditions="option.filters"
+                            zoom="{
+                                 ini:0,
+                                 end:5
+                             }"
                             service-cnf="{
                             idTab:1001,
                             idGra:2,
@@ -59,6 +58,7 @@
                 </chart>
             </light-chart-container>
         </div>
+       <!--
         <div class="col-12 col-sm-12 p-1 h-100" style="height: 350px;">
             <light-chart-container
                     str-title="Montos por Delegación"
@@ -83,6 +83,7 @@
                 </chart>
             </light-chart-container>
         </div>
+        -->
         <div class="row w-100 p-0 m-0" style="height: 350px;">
             <div class="col-12 col-sm-12 p-1 h-100">
                 <light-chart-container
@@ -93,11 +94,11 @@
                     <am-chart
                             id="tabDemandaPotencial-chart04"
                             json-chart-path="json/chart-tab-demanda-potencial-monto-prom.json"
-                            zoom="{
-                                ini:0,
-                                end:5
-                            }"
                             lst-ob-conditions="option.filters"
+                            zoom="{
+                                 ini:0,
+                                 end:5
+                             }"
                             service-cnf="{
                             idTab:1001,
                             idGra:4,
@@ -137,10 +138,6 @@
                     <am-chart
                             id="tabDemandaPotencial-chart06"
                             json-chart-path="json/chart-tab-demanda-potencial-edad-genero.json"
-                            zoom="{
-                                 ini:0,
-                                 end:5
-                             }"
                             lst-ob-conditions="option.filters"
                             service-cnf="{
                             idTab:1001,

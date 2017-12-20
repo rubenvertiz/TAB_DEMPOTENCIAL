@@ -1,0 +1,111 @@
+{
+  "type": "serial",
+  "categoryField": "txEdad",
+  "startDuration": 1,
+  "fontSize": 15,
+  "svgIcons": false,
+  "categoryAxis": {
+    "gridPosition": "start"
+  },
+  "trendLines": [],
+  "graphs": [
+    {
+      "balloonColor": "#B0DE09",
+      "balloonText": "[[title]] of [[category]]:[[value]]",
+      "bulletColor": "#B0DE09",
+      "fillColors": "#B0DE09",
+      "id": "AmGraph-1",
+      "lineColor": "#B0DE09",
+      "title": "MASCULINO",
+      "type": "smoothedLine",
+      "valueField": "nuPrecalificacionesH"
+    },
+    {
+      "balloonColor": "#0D8ECF",
+      "balloonText": "[[title]] of [[category]]:[[value]]",
+      "bulletColor": "#0D8ECF",
+      "fillColors": "#0D8ECF",
+      "id": "AmGraph-2",
+      "lineColor": "#0D8ECF",
+      "title": "FEMENINO",
+      "type": "smoothedLine",
+      "valueField": "nuPrecalificacionesM"
+    },
+    {
+      "balloonColor": "#FF0F00",
+      "balloonText": "[[title]] of [[category]]:[[value]]",
+      "bulletBorderThickness": 0,
+      "bulletColor": "#FF0F00",
+      "fillColors": "#FF0F00",
+      "id": "AmGraph-3",
+      "lineColor": "#FF0F00",
+      "title": "DESCONOCIDO",
+      "type": "smoothedLine",
+      "valueField": "nuPrecalificacionesO"
+    }
+  ],
+  "guides": [],
+  "valueAxes": [
+    {
+      "id": "ValueAxis-1",
+      "title": "# Precalificaciones"
+    }
+  ],
+  "allLabels": [],
+  "balloon": {},
+  "legend": {
+    "enabled": true,
+    "useGraphSettings": true
+  },
+  "titles": [],
+  "dataProvider": [
+    {
+      "txEdad": "15-19",
+      "nuPrecalificacionesH": 8,
+      "nuPrecalificacionesM": 5,
+      "nuPrecalificacionesO": 3
+    },
+    {
+      "txEdad": "20-24",
+      "nuPrecalificacionesH": 6,
+      "nuPrecalificacionesM": 7,
+      "nuPrecalificacionesO": 4
+    },
+    {
+      "txEdad": "25-29",
+      "nuPrecalificacionesH": 2,
+      "nuPrecalificacionesM": 3,
+      "nuPrecalificacionesO": 1
+    },
+    {
+      "txEdad": "30-34",
+      "nuPrecalificacionesH": 4,
+      "nuPrecalificacionesM": 3,
+      "nuPrecalificacionesO": 2
+    },
+    {
+      "txEdad": "35-39",
+      "nuPrecalificacionesH": 6,
+      "nuPrecalificacionesM": 4,
+      "nuPrecalificacionesO": 1
+    },
+    {
+      "txEdad": "40-44",
+      "nuPrecalificacionesH": 3,
+      "nuPrecalificacionesM": 2,
+      "nuPrecalificacionesO": 1
+    },
+    {
+      "txEdad": "45-49",
+      "nuPrecalificacionesH": 6,
+      "nuPrecalificacionesM": 8,
+      "nuPrecalificacionesO": 4
+    },
+    {
+      "txEdad": "50-54",
+      "nuPrecalificacionesH": 3,
+      "nuPrecalificacionesM": 2,
+      "nuPrecalificacionesO": 1
+    }
+  ]
+}

@@ -53,12 +53,11 @@ angular
 
             $scope.generaReporteCSV=function(elem){
                 $scope.getEstados("csv");
-                //window.location.href=gc.conf.xsServicesBaseUrl+'/download_demanda_potencial.xsjs';
             };
 
-            $scope.generaReporteXLSX=function(elem){
+            /*$scope.generaReporteXLSX=function(elem){
                 $scope.getEstados("xlsx");
-            };
+            };*/
 
             $scope.getEstados = function(formato){
                 console.log("getEstados");
@@ -76,20 +75,13 @@ angular
                         var operacion;
                         var cveEdo;
                         if(response.data.length>0) {
-                            //for(var i = 0; i < response.data.length; ++i){
-                            for(var i = 0; i < 1; ++i){
+                           for(var i = 0; i < response.data.length; ++i){
                                     //$scope.getDataEstado(response.data[i], formato);
                                     nombreArchivo = response.data[i].txEstado;
                                     nombreArchivo = nombreArchivo+"-"+new Date().getTime();
                                     cveEdo = response.data[i].txClave;
                                     //creamos el archivo
                                     operacion="Crear";
-                                    $scope.ejcutaOperacion(cveEdo,operacion,nombreArchivo);
-                                    //descargamos el archivo
-                                    operacion="Descarga";
-                                    $scope.ejcutaOperacion(cveEdo,operacion,nombreArchivo);
-                                    // eliminamos el archivo
-                                    operacion="Eliminar";
                                     $scope.ejcutaOperacion(cveEdo,operacion,nombreArchivo);
                             }
                         }
@@ -103,12 +95,10 @@ angular
             }
 
             $scope.ejcutaOperacion=function(cveEdo,operacion,nombreArchivo){
-                console.log("ejcutaOperacion");
-                var url = "http://10.82.0.80:9080/ArchMunicipios/creArchivos?esto=cveEdo&Tipo=operacion&Nombre=nombreArchivo"
+                var url = "http://10.82.0.80:9080/ArchMunicipios/creArchivos?esto=cveEdo&Tipo=operacion&Nombre=nombreArchivo";
                 url = url.replace("cveEdo",cveEdo);
                 url = url.replace("operacion",operacion);
                 url = url.replace("nombreArchivo",nombreArchivo);
-                console.log(url);
                 cds.addWorkTask('ejcutaOperacion', {
                     url:url,
                     success: function (response) {
@@ -121,7 +111,6 @@ angular
                     }
                 });
                 cds.doWorkTask('ejcutaOperacion');
-
             }
 
 
